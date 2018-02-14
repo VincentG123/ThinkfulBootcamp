@@ -6,3 +6,6 @@
 *.json
 *.png
 *.jpg
+*.xpt
+*.SAS
+*.sas7bdat

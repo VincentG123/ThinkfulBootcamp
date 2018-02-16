@@ -9,3 +9,7 @@
 *.xpt
 *.SAS
 *.sas7bdat
+*.pdf
+*.data
+*.map
+*.label

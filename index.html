@@ -76,7 +76,6 @@ function songSearch(inputString) {
   } else {
     var songLength = songs.length;
     var matchingArray = [];
-
     for (var i = 0; i < songLength; i++) {
       var lowerCaseArtist = songs[i].artist.toLowerCase();
       var lowerCaseTitle = songs[i].title.toLowerCase();
@@ -94,6 +93,17 @@ function songSearch(inputString) {
 }
 alert('Welcome! Use the function songSearch(inputString) in the console to find a song in our library!')
 console.log('Welcome! Use the function songSearch(inputString) in the console to find a song in our library!')
+
+// After completing the above, my friend mentioned the filter method which I completely forgot about. 
+// I was able to figure it out though and I can replace lines 78-86 with the code below to get the 
+// same result.
+// 
+// var matchingArray = songs.filter(function(o) {
+// 	return (
+//     	o.artist.toLowerCase().includes(x) || o.title.toLowerCase().includes(x)
+//     );
+// });
+    
 </script>
 
 </head>

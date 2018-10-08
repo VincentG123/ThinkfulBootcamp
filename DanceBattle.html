@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+html,body {
+    height: 100%;
+    margin: 0;
+}
+.wrapper {
+  height: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.rows {
+  flex: 1;
+  display: flex;
+    color: white;
+	font-family: sans-serif;
+	font-size: 36px;
+}
+
+.redBackground {
+  display: flex;      
+  justify-content: center;     
+  align-items: center; 
+  background-color: red;
+  flex:1; 
+}
+
+.whiteBackground {
+  background-color: white;
+  flex: 1;
+}
+</style>
+<script>
+var songs = [
+  {
+    artist: "Maroon 5 Featuring Cardi B",
+    title: "Girls Like You",
+    duration: "3:35"
+  },
+  {
+    artist: "Juice WRLD",
+    title: "Lucid Dreams",
+    duration: "4:00"
+  },
+  {
+    artist: "Post Malone",
+    title: "Better Now",
+    duration: "3:50"
+  },
+  {
+    artist: "Drake",
+    title: "In My Feelings",
+    duration: "3:37"
+  },
+  {
+    artist: "Eminem",
+    title: "KillShot",
+    duration: "4:13"
+  }
+];
+
+function songSearch(inputString) {
+  var x = inputString.toLowerCase();
+  if (x.length <= 2) {
+    return "Enter longer name";
+  } else {
+    var songLength = songs.length;
+    var matchingArray = [];
+
+    for (var i = 0; i < songLength; i++) {
+      var lowerCaseArtist = songs[i].artist.toLowerCase();
+      var lowerCaseTitle = songs[i].title.toLowerCase();
+
+      if (lowerCaseArtist.includes(x) || lowerCaseTitle.includes(x)) {
+        matchingArray.push(songs[i]);
+      }
+    }
+    if (matchingArray.length > 0) {
+      return matchingArray;
+    } else {
+      return "Song not in Object";
+    }
+  }
+}
+alert('Welcome! Use the function songSearch(inputString) in the console to find a song in our library!')
+console.log('Welcome! Use the function songSearch(inputString) in the console to find a song in our library!')
+</script>
+
+</head>
+
+<body>
+<div class="wrapper">
+    <div class='rows' id="row1">
+        <div class="redBackground">DANCE</div>
+        <div class="whiteBackground"></div>
+    </div>
+    <div class='rows' id="row2">
+        <div class="whiteBackground"></div>
+        <div class="redBackground">BATTLE</div>
+    </div>
+</div>
+</body>
+</html>

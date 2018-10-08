@@ -16,22 +16,28 @@ html,body {
 .rows {
   flex: 1;
   display: flex;
-    color: white;
+    color: red;
 	font-family: sans-serif;
-	font-size: 36px;
+	font-size: 20px;
 }
 
 .redBackground {
-  display: flex;      
-  justify-content: center;     
-  align-items: center; 
   background-color: red;
   flex:1; 
 }
 
 .whiteBackground {
+  display: flex;      
+  justify-content: center;     
+  align-items: center; 
   background-color: white;
   flex: 1;
+}
+
+@media (min-width: 400px) {
+  .rows {
+    font-size:50px;
+  }
 }
 </style>
 <script>
@@ -95,12 +101,12 @@ console.log('Welcome! Use the function songSearch(inputString) in the console to
 <body>
 <div class="wrapper">
     <div class='rows' id="row1">
-        <div class="redBackground">DANCE</div>
-        <div class="whiteBackground"></div>
+        <div class="redBackground"></div>
+        <div class="whiteBackground">DANCE</div>
     </div>
     <div class='rows' id="row2">
-        <div class="whiteBackground"></div>
-        <div class="redBackground">BATTLE</div>
+        <div class="whiteBackground">BATTLE</div>
+        <div class="redBackground"></div>
     </div>
 </div>
 </body>
